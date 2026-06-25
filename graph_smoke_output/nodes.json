@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "row": 21.0,
+    "col": 35.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 1,
+    "row": 34.0,
+    "col": 48.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 2,
+    "row": 38.0,
+    "col": 35.25,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 3,
+    "row": 64.0,
+    "col": 35.0,
+    "type": "junction",
+    "degree": 4
+  },
+  {
+    "id": 4,
+    "row": 64.0,
+    "col": 8.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 5,
+    "row": 64.0,
+    "col": 120.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 6,
+    "row": 100.0,
+    "col": 35.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 7,
+    "row": 14.0,
+    "col": 92.0,
+    "type": "road_node",
+    "degree": 2
+  }
+]

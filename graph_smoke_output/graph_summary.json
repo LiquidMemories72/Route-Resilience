@@ -1,0 +1,8 @@
+{
+  "nodes": 8,
+  "edges": 7,
+  "connected_components": 2,
+  "total_length_pixels": 288.7401153701776,
+  "healed_edges": 0,
+  "coordinate_order": "row_col"
+}
