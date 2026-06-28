@@ -2,7 +2,8 @@ import numpy as np
 
 class CostFunction:
     def __init__(self, probability_map, w_prob=1.0, w_dist=1.0, w_dir=1.0, w_curve=1.0, 
-                 w_target_align=1.0, prob_threshold=0.5, w_low_conf=2.0, target_pt=None):
+                 w_target_align=1.0, prob_threshold=0.5, w_low_conf=2.0, target_pt=None,
+                 w_ep_tangent=1.0, src_tangent=None, dst_tangent=None, src_pt=None):
         """
         Args:
             probability_map: 2D numpy array of probabilities [0, 1]
@@ -14,6 +15,10 @@ class CostFunction:
             prob_threshold: threshold below which a pixel is considered low confidence
             w_low_conf: additional penalty for moving into low confidence regions
             target_pt: (y, x) the final destination
+            w_ep_tangent: weight for endpoint tangent consistency
+            src_tangent: (dy, dx) tangent vector at source
+            dst_tangent: (dy, dx) tangent vector at destination
+            src_pt: (y, x) source point
         """
         self.prob_map = probability_map
         self.w_prob = w_prob
@@ -24,6 +29,10 @@ class CostFunction:
         self.prob_threshold = prob_threshold
         self.w_low_conf = w_low_conf
         self.target_pt = target_pt
+        self.w_ep_tangent = w_ep_tangent
+        self.src_tangent = src_tangent
+        self.dst_tangent = dst_tangent
+        self.src_pt = src_pt
         
     def get_cost(self, u, v, prev_dir=None):
         # 1. Distance cost
@@ -68,5 +77,23 @@ class CostFunction:
                 # t_sim is [-1, 1]. We want to penalize moving away, reward moving towards
                 cost_align = self.w_target_align * (1.0 - t_sim)
                 
-        total_cost = cost_dist + cost_prob + cost_dir + cost_curve + cost_align
+        # 5. Endpoint Tangent Consistency
+        cost_ep_tangent = 0.0
+        if dist > 0:
+            if self.src_pt is not None and self.src_tangent is not None:
+                d_src = np.hypot(u[0] - self.src_pt[0], u[1] - self.src_pt[1])
+                if d_src < 20: 
+                    sim_src = new_dir[0] * self.src_tangent[0] + new_dir[1] * self.src_tangent[1]
+                    weight = max(0, 1.0 - d_src / 20.0)
+                    cost_ep_tangent += self.w_ep_tangent * weight * (1.0 - sim_src)
+                    
+            if self.target_pt is not None and self.dst_tangent is not None:
+                d_dst = np.hypot(u[0] - self.target_pt[0], u[1] - self.target_pt[1])
+                if d_dst < 20:
+                    # new_dir should be aligned with -dst_tangent (entering target)
+                    sim_dst = new_dir[0] * (-self.dst_tangent[0]) + new_dir[1] * (-self.dst_tangent[1])
+                    weight = max(0, 1.0 - d_dst / 20.0)
+                    cost_ep_tangent += self.w_ep_tangent * weight * (1.0 - sim_dst)
+                
+        total_cost = cost_dist + cost_prob + cost_dir + cost_curve + cost_align + cost_ep_tangent
         return total_cost, new_dir

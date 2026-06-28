@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "row": 3.0,
+    "col": 497.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 1,
+    "row": 401.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 2,
+    "row": 511.0,
+    "col": 108.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 3,
+    "row": 510.0,
+    "col": 330.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]

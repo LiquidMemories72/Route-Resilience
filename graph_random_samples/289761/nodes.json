@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "row": 0.0,
+    "col": 245.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 1,
+    "row": 10.0,
+    "col": 263.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 2,
+    "row": 136.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 3,
+    "row": 350.0,
+    "col": 509.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 4,
+    "row": 458.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 5,
+    "row": 511.0,
+    "col": 34.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]

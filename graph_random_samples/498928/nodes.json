@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "row": 9.75,
+    "col": 207.0,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 2,
+    "row": 11.666666666666666,
+    "col": 171.33333333333334,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 3,
+    "row": 10.666666666666666,
+    "col": 197.66666666666666,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 4,
+    "row": 12.75,
+    "col": 181.0,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 5,
+    "row": 15.333333333333334,
+    "col": 168.66666666666666,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 6,
+    "row": 17.25,
+    "col": 12.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 7,
+    "row": 109.0,
+    "col": 11.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 8,
+    "row": 110.0,
+    "col": 169.75,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 9,
+    "row": 166.0,
+    "col": 10.25,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 10,
+    "row": 202.75,
+    "col": 9.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 11,
+    "row": 202.75,
+    "col": 54.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 12,
+    "row": 206.33333333333334,
+    "col": 85.33333333333333,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 13,
+    "row": 317.75,
+    "col": 464.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 14,
+    "row": 326.0,
+    "col": 85.75,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 16,
+    "row": 15.0,
+    "col": 1.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 17,
+    "row": 53.0,
+    "col": 227.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 18,
+    "row": 165.0,
+    "col": 19.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 19,
+    "row": 174.0,
+    "col": 54.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 20,
+    "row": 205.0,
+    "col": 3.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 21,
+    "row": 262.0,
+    "col": 511.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 22,
+    "row": 323.0,
+    "col": 511.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 23,
+    "row": 325.0,
+    "col": 20.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 24,
+    "row": 509.0,
+    "col": 84.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 25,
+    "row": 511.0,
+    "col": 240.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]

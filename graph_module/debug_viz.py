@@ -9,7 +9,7 @@ class DebugLogger:
         os.makedirs(output_dir, exist_ok=True)
         self.candidates = []
         
-    def log_candidate(self, stage, src, dst, dist, score, path, is_valid, reason):
+    def log_candidate(self, stage, src, dst, dist, score, path, explored_nodes, final_cost, is_valid, reason):
         self.candidates.append({
             'stage': stage,
             'src': (int(src[0]), int(src[1])),
@@ -17,6 +17,8 @@ class DebugLogger:
             'dist': float(dist),
             'score': float(score),
             'path_length': len(path) if path else 0,
+            'explored_nodes': int(explored_nodes),
+            'final_cost': float(final_cost),
             'is_valid': is_valid,
             'reason': reason,
             'path': path
@@ -33,6 +35,8 @@ class DebugLogger:
                 'dist': c['dist'],
                 'score': c['score'],
                 'path_length': c['path_length'],
+                'explored_nodes': c['explored_nodes'],
+                'final_cost': c['final_cost'],
                 'is_valid': c['is_valid'],
                 'reason': c['reason']
             })
