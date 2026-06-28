@@ -106,10 +106,10 @@ with torch.no_grad():
             logits
         ).squeeze()
 
-        pred = pred.cpu().numpy()
+        pred_prob = pred.cpu().numpy()
 
-        pred = (
-            pred > THRESHOLD
+        pred_binary = (
+            pred_prob > THRESHOLD
         ).astype(np.uint8)
 
         output_name = filename.replace(
@@ -122,7 +122,20 @@ with torch.no_grad():
                 OUTPUT_DIR,
                 output_name
             ),
-            pred * 255
+            pred_binary * 255
+        )
+        
+        prob_name = filename.replace(
+            "_sat.jpg",
+            "_prob.npy"
+        )
+        
+        np.save(
+            os.path.join(
+                OUTPUT_DIR,
+                prob_name
+            ),
+            pred_prob
         )
 
 print()

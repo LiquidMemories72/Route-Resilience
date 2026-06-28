@@ -43,8 +43,13 @@ def _endpoint_heading(
 def merge_nearby_junctions(
     graph: nx.MultiGraph, distance_threshold: float = 3.0
 ) -> nx.MultiGraph:
-    """Merge junction nodes whose coordinates fall within a pixel threshold."""
-    if distance_threshold <= 0 or graph.number_of_nodes() < 2:
+    """Merge junctions only when graph topology says they are the same blob.
+
+    Distance is used as a tolerance on an existing artifact edge, never as the
+    sole merge criterion. Junctions from the same extracted junction blob are
+    also safe to merge.
+    """
+    if graph.number_of_nodes() < 2:
         return graph.copy()
     junctions = [
         node
@@ -64,9 +69,25 @@ def merge_nearby_junctions(
         if root_a != root_b:
             parent[max(root_a, root_b)] = min(root_a, root_b)
 
+    def same_blob(a: int, b: int) -> bool:
+        blob_a = graph.nodes[a].get("junction_blob")
+        blob_b = graph.nodes[b].get("junction_blob")
+        return blob_a is not None and blob_a == blob_b
+
+    def connected_by_artifact_edge(a: int, b: int) -> bool:
+        if distance_threshold <= 0 or not graph.has_edge(a, b):
+            return False
+        shortest = min(
+            float(data.get("length", 0.0))
+            for data in graph.get_edge_data(a, b).values()
+        )
+        if shortest > distance_threshold:
+            return False
+        return np.linalg.norm(_coord(graph, a) - _coord(graph, b)) <= distance_threshold
+
     for index, a in enumerate(junctions):
         for b in junctions[index + 1 :]:
-            if np.linalg.norm(_coord(graph, a) - _coord(graph, b)) <= distance_threshold:
+            if same_blob(a, b) or connected_by_artifact_edge(a, b):
                 union(a, b)
 
     groups: Dict[int, List[int]] = {}
@@ -93,6 +114,11 @@ def merge_nearby_junctions(
             pixels=pixels,
             type="junction" if len(members) > 1 else attributes.get("type", "unknown"),
         )
+        blobs = sorted(
+            {graph.nodes[node].get("junction_blob") for node in members if graph.nodes[node].get("junction_blob") is not None}
+        )
+        if blobs:
+            attributes["junction_blob"] = blobs[0] if len(blobs) == 1 else tuple(blobs)
         result.add_node(target, **attributes)
 
     for u, v, data in graph.edges(data=True):
@@ -103,7 +129,7 @@ def merge_nearby_junctions(
         attributes = dict(data)
         geometry = [tuple(map(float, point)) for point in attributes.get("geometry", [])]
         if geometry and new_u != new_v:
-            old_u, old_v = _coord(graph, u), _coord(graph, v)
+            old_u = _coord(graph, u)
             if np.linalg.norm(np.asarray(geometry[0]) - old_u) > np.linalg.norm(
                 np.asarray(geometry[-1]) - old_u
             ):
@@ -114,7 +140,6 @@ def merge_nearby_junctions(
             attributes["length"] = _length(geometry)
         result.add_edge(new_u, new_v, **attributes)
     return result
-
 
 def connect_nearby_endpoints(
     graph: nx.MultiGraph,

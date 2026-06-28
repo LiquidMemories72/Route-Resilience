@@ -1,8 +1,27 @@
 {
   "nodes": 38,
-  "edges": 35,
-  "connected_components": 4,
-  "total_length_pixels": 2445.4103884177653,
-  "healed_edges": 1,
-  "coordinate_order": "row_col"
+  "edges": 40,
+  "connected_components": 2,
+  "total_length_pixels": 2701.5489099247065,
+  "healed_edges": 0,
+  "coordinate_order": "row_col",
+  "simplification_diagnostics": {
+    "before": {
+      "node_count": 39,
+      "edge_count": 41,
+      "junction_count": 20,
+      "average_node_degree": 2.1025641025641026
+    },
+    "merged_junctions": 0,
+    "removed_degree2_nodes": 1,
+    "removed_short_edges": 0,
+    "removed_tiny_cycles": 0,
+    "removed_duplicate_paths": 0,
+    "after": {
+      "node_count": 38,
+      "edge_count": 40,
+      "junction_count": 20,
+      "average_node_degree": 2.1052631578947367
+    }
+  }
 }

@@ -1,0 +1,149 @@
+[
+  {
+    "id": 0,
+    "row": 120.0,
+    "col": 0.8,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 1,
+    "row": 172.33333333333334,
+    "col": 2.0833333333333335,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 2,
+    "row": 214.0,
+    "col": 4.25,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 3,
+    "row": 215.25,
+    "col": 13.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 4,
+    "row": 216.75,
+    "col": 53.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 5,
+    "row": 222.0,
+    "col": 34.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 6,
+    "row": 236.0,
+    "col": 92.25,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 7,
+    "row": 243.0,
+    "col": 104.8,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 8,
+    "row": 247.66666666666666,
+    "col": 115.33333333333333,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 9,
+    "row": 252.0,
+    "col": 4.25,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 10,
+    "row": 259.75,
+    "col": 95.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 11,
+    "row": 263.6666666666667,
+    "col": 18.333333333333332,
+    "type": "road_node",
+    "degree": 2
+  },
+  {
+    "id": 12,
+    "row": 14.0,
+    "col": 511.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 13,
+    "row": 62.0,
+    "col": 510.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 14,
+    "row": 113.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 15,
+    "row": 151.0,
+    "col": 510.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 16,
+    "row": 157.0,
+    "col": 150.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 17,
+    "row": 254.0,
+    "col": 130.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 19,
+    "row": 386.0,
+    "col": 129.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 20,
+    "row": 483.0,
+    "col": 1.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 21,
+    "row": 511.0,
+    "col": 213.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]

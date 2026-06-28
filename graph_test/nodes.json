@@ -1,267 +1,267 @@
 [
   {
     "id": 0,
-    "row": 52.0,
-    "col": 313.0,
-    "type": "endpoint",
-    "degree": 1
+    "row": 116.0,
+    "col": 198.75,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 1,
-    "row": 107.0,
-    "col": 511.0,
-    "type": "endpoint",
-    "degree": 1
+    "row": 135.0,
+    "col": 62.0,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 2,
-    "row": 109.66666666666667,
-    "col": 306.6666666666667,
+    "row": 140.75,
+    "col": 205.0,
     "type": "junction",
     "degree": 3
   },
   {
     "id": 3,
-    "row": 118.0,
-    "col": 300.0,
+    "row": 154.0,
+    "col": 113.0,
     "type": "junction",
     "degree": 3
   },
   {
     "id": 4,
-    "row": 169.0,
-    "col": 99.0,
+    "row": 159.66666666666666,
+    "col": 91.33333333333333,
     "type": "junction",
     "degree": 3
   },
   {
     "id": 5,
-    "row": 193.0,
-    "col": 2.0,
-    "type": "endpoint",
-    "degree": 1
+    "row": 161.33333333333334,
+    "col": 88.33333333333333,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 6,
-    "row": 313.25,
-    "col": 258.0,
+    "row": 251.33333333333334,
+    "col": 175.33333333333334,
     "type": "junction",
     "degree": 3
   },
   {
     "id": 7,
-    "row": 314.0,
-    "col": 188.0,
-    "type": "endpoint",
-    "degree": 1
-  },
-  {
-    "id": 8,
-    "row": 356.0,
-    "col": 409.0,
-    "type": "endpoint",
-    "degree": 1
-  },
-  {
-    "id": 9,
-    "row": 359.0,
-    "col": 242.0,
+    "row": 276.75,
+    "col": 100.0,
     "type": "junction",
     "degree": 3
   },
   {
+    "id": 8,
+    "row": 281.06666666666666,
+    "col": 136.6,
+    "type": "junction",
+    "degree": 4
+  },
+  {
     "id": 10,
-    "row": 361.0,
-    "col": 391.0,
-    "type": "endpoint",
-    "degree": 1
+    "row": 328.75,
+    "col": 454.0,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 11,
-    "row": 365.0,
-    "col": 474.0,
-    "type": "endpoint",
-    "degree": 1
+    "row": 334.75,
+    "col": 357.0,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 12,
-    "row": 366.0,
-    "col": 509.0,
-    "type": "endpoint",
-    "degree": 1
+    "row": 339.75,
+    "col": 253.0,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 13,
-    "row": 370.0,
-    "col": 136.0,
-    "type": "road_node",
-    "degree": 2
+    "row": 355.0,
+    "col": 140.42857142857142,
+    "type": "junction",
+    "degree": 4
   },
   {
     "id": 14,
-    "row": 372.0,
-    "col": 477.25,
+    "row": 355.3333333333333,
+    "col": 22.666666666666668,
     "type": "junction",
     "degree": 3
   },
   {
     "id": 15,
-    "row": 382.0,
-    "col": 145.0,
-    "type": "road_node",
-    "degree": 2
+    "row": 394.0,
+    "col": 135.75,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 16,
-    "row": 383.5,
-    "col": 280.5,
-    "type": "road_node",
-    "degree": 2
+    "row": 436.75,
+    "col": 26.0,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 17,
-    "row": 390.0,
-    "col": 150.0,
-    "type": "endpoint",
-    "degree": 1
+    "row": 452.0,
+    "col": 136.75,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 18,
-    "row": 391.3333333333333,
-    "col": 207.66666666666666,
+    "row": 456.3333333333333,
+    "col": 65.66666666666667,
     "type": "junction",
     "degree": 3
   },
   {
     "id": 19,
-    "row": 407.0,
-    "col": 0.0,
-    "type": "endpoint",
-    "degree": 1
+    "row": 494.0,
+    "col": 139.75,
+    "type": "junction",
+    "degree": 3
   },
   {
     "id": 20,
-    "row": 427.6666666666667,
-    "col": 6.333333333333333,
+    "row": 498.0,
+    "col": 69.0,
     "type": "junction",
     "degree": 3
   },
   {
     "id": 21,
-    "row": 445.6666666666667,
-    "col": 399.6666666666667,
-    "type": "junction",
-    "degree": 3
+    "row": 0.0,
+    "col": 321.0,
+    "type": "endpoint",
+    "degree": 1
   },
   {
     "id": 22,
-    "row": 446.0,
-    "col": 0.0,
+    "row": 0.0,
+    "col": 347.0,
     "type": "endpoint",
     "degree": 1
   },
   {
     "id": 23,
-    "row": 465.0,
-    "col": 234.0,
+    "row": 141.0,
+    "col": 197.0,
     "type": "endpoint",
     "degree": 1
   },
   {
     "id": 24,
-    "row": 467.0,
-    "col": 382.0,
-    "type": "junction",
-    "degree": 3
+    "row": 147.0,
+    "col": 5.0,
+    "type": "endpoint",
+    "degree": 1
   },
   {
     "id": 25,
-    "row": 472.0,
-    "col": 199.8,
-    "type": "junction",
-    "degree": 3
+    "row": 146.0,
+    "col": 306.0,
+    "type": "endpoint",
+    "degree": 1
   },
   {
     "id": 26,
-    "row": 471.6666666666667,
-    "col": 229.66666666666666,
-    "type": "junction",
-    "degree": 3
+    "row": 207.0,
+    "col": 95.0,
+    "type": "endpoint",
+    "degree": 1
   },
   {
     "id": 27,
-    "row": 475.0,
-    "col": 140.0,
+    "row": 211.0,
+    "col": 450.0,
     "type": "endpoint",
     "degree": 1
   },
   {
     "id": 28,
-    "row": 485.6666666666667,
-    "col": 272.6666666666667,
-    "type": "junction",
-    "degree": 3
+    "row": 216.0,
+    "col": 1.0,
+    "type": "endpoint",
+    "degree": 1
   },
   {
     "id": 29,
-    "row": 489.0,
-    "col": 110.0,
+    "row": 226.0,
+    "col": 150.0,
     "type": "endpoint",
     "degree": 1
   },
   {
     "id": 30,
-    "row": 488.25,
-    "col": 252.0,
-    "type": "junction",
-    "degree": 3
-  },
-  {
-    "id": 31,
-    "row": 505.75,
-    "col": 195.0,
-    "type": "road_node",
-    "degree": 2
-  },
-  {
-    "id": 32,
-    "row": 505.0,
-    "col": 250.0,
+    "row": 230.0,
+    "col": 358.0,
     "type": "endpoint",
     "degree": 1
   },
   {
-    "id": 33,
-    "row": 507.0,
-    "col": 107.0,
+    "id": 31,
+    "row": 249.0,
+    "col": 191.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 32,
+    "row": 279.0,
+    "col": 1.0,
     "type": "endpoint",
     "degree": 1
   },
   {
     "id": 34,
-    "row": 508.0,
-    "col": 126.0,
+    "row": 328.0,
+    "col": 509.0,
     "type": "endpoint",
     "degree": 1
   },
   {
     "id": 35,
-    "row": 509.0,
-    "col": 189.0,
+    "row": 358.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 36,
+    "row": 391.0,
+    "col": 94.0,
     "type": "endpoint",
     "degree": 1
   },
   {
     "id": 37,
-    "row": 509.0,
-    "col": 394.0,
+    "row": 437.0,
+    "col": 4.0,
     "type": "endpoint",
     "degree": 1
   },
   {
     "id": 38,
-    "row": 510.0,
-    "col": 444.0,
+    "row": 507.0,
+    "col": 67.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 39,
+    "row": 509.0,
+    "col": 136.0,
     "type": "endpoint",
     "degree": 1
   }

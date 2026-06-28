@@ -1,0 +1,9 @@
+{
+  "nodes": 39,
+  "edges": 41,
+  "connected_components": 2,
+  "total_length_pixels": 2700.312841947207,
+  "healed_edges": 0,
+  "coordinate_order": "row_col",
+  "simplification_diagnostics": {}
+}
