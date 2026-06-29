@@ -1,0 +1,149 @@
+[
+  {
+    "id": 0,
+    "row": 123.75,
+    "col": 35.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 1,
+    "row": 136.66666666666666,
+    "col": 95.33333333333333,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 2,
+    "row": 161.66666666666666,
+    "col": 78.33333333333333,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 3,
+    "row": 162.33333333333334,
+    "col": 84.66666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 4,
+    "row": 171.0,
+    "col": 86.8,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 5,
+    "row": 191.83333333333331,
+    "col": 80.33333333333334,
+    "type": "junction",
+    "degree": 4
+  },
+  {
+    "id": 7,
+    "row": 198.75,
+    "col": 116.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 8,
+    "row": 214.66666666666666,
+    "col": 72.66666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 9,
+    "row": 230.66666666666666,
+    "col": 207.33333333333334,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 10,
+    "row": 241.75,
+    "col": 172.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 11,
+    "row": 329.0,
+    "col": 331.75,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 12,
+    "row": 483.0,
+    "col": 479.75,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 13,
+    "row": 33.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 14,
+    "row": 77.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 15,
+    "row": 118.0,
+    "col": 3.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 16,
+    "row": 129.0,
+    "col": 412.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 17,
+    "row": 140.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 18,
+    "row": 171.0,
+    "col": 1.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 19,
+    "row": 194.0,
+    "col": 1.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 20,
+    "row": 394.0,
+    "col": 511.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 21,
+    "row": 508.0,
+    "col": 510.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]

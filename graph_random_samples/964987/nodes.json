@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "row": 124.75,
+    "col": 179.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 1,
+    "row": 0.0,
+    "col": 266.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 2,
+    "row": 84.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 3,
+    "row": 216.0,
+    "col": 509.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 4,
+    "row": 391.0,
+    "col": 274.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 5,
+    "row": 400.0,
+    "col": 323.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]
