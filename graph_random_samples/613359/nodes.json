@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "row": 63.75,
+    "col": 392.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 1,
+    "row": 271.75,
+    "col": 10.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 2,
+    "row": 0.0,
+    "col": 440.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 3,
+    "row": 4.0,
+    "col": 77.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 4,
+    "row": 122.0,
+    "col": 509.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 5,
+    "row": 276.0,
+    "col": 68.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 6,
+    "row": 278.0,
+    "col": 1.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 7,
+    "row": 509.0,
+    "col": 105.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]

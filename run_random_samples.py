@@ -1,4 +1,5 @@
-﻿import argparse
+import argparse
+import shutil
 import json
 import os
 import random
@@ -137,8 +138,24 @@ def main() -> None:
         print(f"[{index}/{num_samples}] Processing image ID: {base_id}")
 
         cmd = _base_command(args, mask_path, output_dir)
+        # Determine satellite image path for this sample
+        sat_path = Path(args.sat_dir) / f"{base_id}_sat.jpg"
         print("  Simplified run:")
         ok = _run_pipeline(cmd, output_dir)
+
+        # Copy original satellite image to the output folder if available
+        if sat_path.exists():
+            shutil.copy2(sat_path, output_dir / sat_path.name)
+
+        # After repair, copy the debug visualizations to the sample's debug directory
+        if not args.no_repair:
+            debug_src = Path("graph_debug")
+            if debug_src.is_dir():
+                dest_debug = output_dir / "debug"
+                if dest_debug.exists():
+                    shutil.rmtree(dest_debug)
+                shutil.copytree(debug_src, dest_debug)
+
 
         if ok and args.compare_no_simplify and not args.no_simplify:
             baseline_dir = output_base_dir / f"{base_id}_nosimplify"

@@ -1,0 +1,79 @@
+[
+  {
+    "id": 0,
+    "row": 130.66666666666666,
+    "col": 146.33333333333334,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 1,
+    "row": 218.75,
+    "col": 350.0,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 2,
+    "row": 224.75,
+    "col": 345.0,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 3,
+    "row": 235.5,
+    "col": 336.75,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 4,
+    "row": 235.66666666666666,
+    "col": 332.6666666666667,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 5,
+    "row": 38.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 6,
+    "row": 53.0,
+    "col": 510.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 7,
+    "row": 346.0,
+    "col": 511.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 8,
+    "row": 375.0,
+    "col": 1.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 9,
+    "row": 482.0,
+    "col": 381.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 10,
+    "row": 498.0,
+    "col": 378.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]

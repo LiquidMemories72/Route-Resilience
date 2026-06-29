@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from typing import Optional, Union
 import cv2
+import shutil
 import networkx as nx
 import numpy as np
 from skimage.morphology import skeletonize as skimage_skeletonize
@@ -84,6 +85,22 @@ def run_pipeline(
     skeleton = make_skeleton(cleaned)
 
     if prob_map is not None:
+        # Visualization of probability map is handled by TopologyRepair
+
+        # Copy original satellite image to the output folder if provided
+        if satellite_image is not None:
+            src_sat = Path(satellite_image) if isinstance(satellite_image, (str, Path)) else None
+            if src_sat and src_sat.exists():
+                shutil.copy2(src_sat, output / src_sat.name)
+
+        # Copy debug visualizations to a debug subdirectory within the output folder
+        debug_src = Path("graph_debug")
+        if debug_src.is_dir():
+            dest_debug = output / "debug"
+            if dest_debug.exists():
+                shutil.rmtree(dest_debug)
+            shutil.copytree(debug_src, dest_debug)
+            
         probability = np.load(prob_map) if isinstance(prob_map, (str, Path)) else np.asarray(prob_map)
         repair = TopologyRepair(probability, cleaned, skeleton)
         skeleton = repair.run()
