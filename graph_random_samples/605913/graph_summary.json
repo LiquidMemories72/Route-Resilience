@@ -1,0 +1,27 @@
+{
+  "nodes": 8,
+  "edges": 5,
+  "connected_components": 3,
+  "total_length_pixels": 820.9259735953042,
+  "healed_edges": 0,
+  "coordinate_order": "row_col",
+  "simplification_diagnostics": {
+    "before": {
+      "node_count": 8,
+      "edge_count": 5,
+      "junction_count": 1,
+      "average_node_degree": 1.25
+    },
+    "merged_junctions": 0,
+    "removed_degree2_nodes": 0,
+    "removed_short_edges": 0,
+    "removed_tiny_cycles": 0,
+    "removed_duplicate_paths": 0,
+    "after": {
+      "node_count": 8,
+      "edge_count": 5,
+      "junction_count": 1,
+      "average_node_degree": 1.25
+    }
+  }
+}

@@ -1,0 +1,373 @@
+[
+  {
+    "id": 0,
+    "row": 32.75,
+    "col": 475.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 1,
+    "row": 36.25,
+    "col": 484.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 2,
+    "row": 44.75,
+    "col": 484.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 3,
+    "row": 48.0,
+    "col": 472.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 4,
+    "row": 60.666666666666664,
+    "col": 465.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 5,
+    "row": 72.75,
+    "col": 455.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 6,
+    "row": 75.25,
+    "col": 463.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 7,
+    "row": 79.25,
+    "col": 445.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 8,
+    "row": 79.0,
+    "col": 448.75,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 9,
+    "row": 85.33333333333333,
+    "col": 458.3333333333333,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 10,
+    "row": 88.75,
+    "col": 445.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 11,
+    "row": 92.25,
+    "col": 455.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 12,
+    "row": 96.66666666666667,
+    "col": 441.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 13,
+    "row": 103.0,
+    "col": 450.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 14,
+    "row": 104.66666666666667,
+    "col": 437.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 15,
+    "row": 110.0,
+    "col": 447.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 16,
+    "row": 112.66666666666667,
+    "col": 433.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 17,
+    "row": 118.0,
+    "col": 443.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 18,
+    "row": 120.66666666666667,
+    "col": 429.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 19,
+    "row": 126.33333333333333,
+    "col": 438.3333333333333,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 20,
+    "row": 159.66666666666666,
+    "col": 409.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 21,
+    "row": 161.0,
+    "col": 499.125,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 22,
+    "row": 165.25,
+    "col": 419.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 23,
+    "row": 174.75,
+    "col": 405.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 24,
+    "row": 176.33333333333334,
+    "col": 410.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 25,
+    "row": 193.4,
+    "col": 397.8,
+    "type": "junction",
+    "degree": 4
+  },
+  {
+    "id": 26,
+    "row": 207.75,
+    "col": 386.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 27,
+    "row": 210.0,
+    "col": 394.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 28,
+    "row": 223.75,
+    "col": 377.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 29,
+    "row": 228.0,
+    "col": 386.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 30,
+    "row": 237.66666666666666,
+    "col": 369.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 31,
+    "row": 243.0,
+    "col": 378.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 32,
+    "row": 251.66666666666666,
+    "col": 361.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 33,
+    "row": 258.0,
+    "col": 371.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 34,
+    "row": 269.6666666666667,
+    "col": 353.6666666666667,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 35,
+    "row": 275.0,
+    "col": 362.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 36,
+    "row": 310.0,
+    "col": 338.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 37,
+    "row": 357.75,
+    "col": 322.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 38,
+    "row": 459.0,
+    "col": 250.75,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 39,
+    "row": 467.6666666666667,
+    "col": 236.66666666666666,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 40,
+    "row": 475.6666666666667,
+    "col": 228.66666666666666,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 41,
+    "row": 474.0,
+    "col": 245.0,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 42,
+    "row": 483.3333333333333,
+    "col": 237.33333333333334,
+    "type": "junction",
+    "degree": 3
+  },
+  {
+    "id": 43,
+    "row": 496.3333333333333,
+    "col": 483.3333333333333,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 44,
+    "row": 503.0,
+    "col": 500.25,
+    "type": "junction",
+    "degree": 2
+  },
+  {
+    "id": 45,
+    "row": 0.0,
+    "col": 495.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 46,
+    "row": 0.0,
+    "col": 511.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 47,
+    "row": 41.0,
+    "col": 510.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 48,
+    "row": 83.0,
+    "col": 0.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 49,
+    "row": 132.0,
+    "col": 511.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 50,
+    "row": 496.0,
+    "col": 509.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 51,
+    "row": 511.0,
+    "col": 192.0,
+    "type": "endpoint",
+    "degree": 1
+  },
+  {
+    "id": 52,
+    "row": 510.0,
+    "col": 213.0,
+    "type": "endpoint",
+    "degree": 1
+  }
+]

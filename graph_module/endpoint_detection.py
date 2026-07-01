@@ -132,3 +132,91 @@ def estimate_endpoint_tangent(endpoint, skeleton, branch_mask, length=10):
     if norm > 0:
         return (dy / norm, dx / norm)
     return (0.0, 0.0)
+
+def get_junction_clusters(branch_mask):
+    """
+    Group adjacent branch points into unified junction clusters.
+    """
+    structure = np.ones((3, 3), dtype=np.int32)
+    labeled_junctions, num_junctions = ndimage.label(branch_mask > 0, structure=structure)
+    return labeled_junctions, num_junctions
+
+def consolidate_topology_endpoints(endpoints, tangents, skeleton, branch_mask, length_threshold=15, tangent_dot_threshold=0.5):
+    """
+    Consolidate redundant endpoints (spurs) that originate from the same junction cluster
+    and have compatible outward tangent directions.
+    """
+    labeled_junctions, _ = get_junction_clusters(branch_mask)
+    
+    h, w = skeleton.shape
+    directions = [(-1, -1), (-1, 0), (-1, 1),
+                  (0, -1),           (0, 1),
+                  (1, -1),  (1, 0),  (1, 1)]
+                  
+    endpoint_to_junction = {}
+    
+    # 1. Trace each endpoint back to see if it hits a junction cluster quickly
+    for idx, ep in enumerate(endpoints):
+        y, x = ep
+        curr = (y, x)
+        prev = None
+        hit_junction = -1
+        
+        for _ in range(length_threshold):
+            if branch_mask[curr[0], curr[1]] > 0 and curr != ep:
+                hit_junction = labeled_junctions[curr[0], curr[1]]
+                break
+                
+            next_pixel = None
+            for dy, dx in directions:
+                ny, nx = curr[0] + dy, curr[1] + dx
+                if 0 <= ny < h and 0 <= nx < w:
+                    if skeleton[ny, nx] > 0:
+                        n_pt = (ny, nx)
+                        if n_pt != prev:
+                            next_pixel = n_pt
+                            break
+                            
+            if next_pixel is None:
+                break
+            prev = curr
+            curr = next_pixel
+            
+        if hit_junction != -1:
+            if hit_junction not in endpoint_to_junction:
+                endpoint_to_junction[hit_junction] = []
+            endpoint_to_junction[hit_junction].append(idx)
+            
+    # 2. Consolidate within junction clusters
+    keep_indices = set(range(len(endpoints)))
+    
+    for j_id, ep_indices in endpoint_to_junction.items():
+        if len(ep_indices) < 2:
+            continue
+            
+        # Greedily merge compatible endpoints
+        merged = set()
+        for i in range(len(ep_indices)):
+            idx_a = ep_indices[i]
+            if idx_a in merged:
+                continue
+                
+            for j in range(i + 1, len(ep_indices)):
+                idx_b = ep_indices[j]
+                if idx_b in merged:
+                    continue
+                    
+                t_a = tangents[idx_a]
+                t_b = tangents[idx_b]
+                
+                dot_prod = t_a[0]*t_b[0] + t_a[1]*t_b[1]
+                if dot_prod > tangent_dot_threshold:
+                    # They point in roughly the same direction. Merge them.
+                    # We drop idx_b and keep idx_a as the representative.
+                    merged.add(idx_b)
+                    keep_indices.discard(idx_b)
+                    
+    consolidated_endpoints = [endpoints[i] for i in sorted(list(keep_indices))]
+    consolidated_tangents = [tangents[i] for i in sorted(list(keep_indices))]
+    
+    return consolidated_endpoints, consolidated_tangents

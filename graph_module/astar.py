@@ -1,7 +1,7 @@
 import numpy as np
 import heapq
 
-def run_bidirectional_astar(src, target, target_pt, cost_func, img_shape, margin, traversable_mask=None):
+def run_bidirectional_astar(src, target, target_pt, cost_func, img_shape, margin, traversable_mask=None, max_explored_nodes=800):
     """
     Run Bidirectional A* in an adaptive elliptical search window.
     
@@ -13,6 +13,7 @@ def run_bidirectional_astar(src, target, target_pt, cost_func, img_shape, margin
         img_shape: (H, W) of the full image
         margin: adaptive margin for the elliptical search region
         traversable_mask: boolean array (H, W) where True means allowed to traverse
+        max_explored_nodes: hard cap on total nodes expanded before giving up
         
     Returns:
         path: list of (y, x) coordinates from src to dst, or None if no path found
@@ -53,6 +54,9 @@ def run_bidirectional_astar(src, target, target_pt, cost_func, img_shape, margin
     explored_count = 0
     
     while fwd_pq and bwd_pq:
+        if explored_count >= max_explored_nodes:
+            break
+            
         fwd_min_f = fwd_pq[0][0]
         bwd_min_f = bwd_pq[0][0]
         

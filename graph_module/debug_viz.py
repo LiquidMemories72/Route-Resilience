@@ -8,6 +8,14 @@ class DebugLogger:
         self.output_dir = output_dir
         os.makedirs(output_dir, exist_ok=True)
         self.candidates = []
+        self.original_endpoints = set()
+        self.consolidated_endpoints = set()
+        self.searches_saved = 0
+        
+    def log_endpoints(self, original_eps, consolidated_eps, searches_saved_estimate):
+        self.original_endpoints.update(original_eps)
+        self.consolidated_endpoints.update(consolidated_eps)
+        self.searches_saved += searches_saved_estimate
         
     def log_candidate(self, stage, src, dst, dist, score, path, explored_nodes, final_cost, is_valid, reason):
         self.candidates.append({
@@ -41,13 +49,23 @@ class DebugLogger:
                 'reason': c['reason']
             })
             
+        full_log = {
+            'candidates': summary,
+            'optimization_stats': {
+                'original_endpoints': len(self.original_endpoints),
+                'consolidated_endpoints': len(self.consolidated_endpoints),
+                'pruned_endpoints': len(self.original_endpoints) - len(self.consolidated_endpoints),
+                'estimated_searches_saved': self.searches_saved
+            }
+        }
+            
         with open(os.path.join(self.output_dir, filename), 'w') as f:
-            json.dump(summary, f, indent=2)
+            json.dump(full_log, f, indent=2)
             
     def visualize(self, prob_map, filename="repair_debug_viz.png"):
         plt.figure(figsize=(12, 12))
         plt.imshow(prob_map, cmap='gray', alpha=0.5)
-        plt.title("Topology Repair Debug Visualization")
+        plt.title(f"Topology Repair Debug\nSaved ~{self.searches_saved} redundant A* searches")
         
         for c in self.candidates:
             path = c['path']
@@ -57,23 +75,27 @@ class DebugLogger:
             path_np = np.array(path)
             
             if c['is_valid']:
-                # Plot accepted in green
                 plt.plot(path_np[:, 1], path_np[:, 0], 'g-', linewidth=2, alpha=0.8)
-                # Plot endpoints
-                plt.plot(c['src'][1], c['src'][0], 'go', markersize=4)
-                plt.plot(c['dst'][1], c['dst'][0], 'go', markersize=4)
             else:
-                # Plot rejected in red
                 plt.plot(path_np[:, 1], path_np[:, 0], 'r--', linewidth=1, alpha=0.5)
-                # Plot endpoints
-                plt.plot(c['src'][1], c['src'][0], 'ro', markersize=3)
-                plt.plot(c['dst'][1], c['dst'][0], 'ro', markersize=3)
                 
-                # Add text for reason near the middle of the path
                 mid_idx = len(path_np) // 2
                 plt.text(path_np[mid_idx, 1], path_np[mid_idx, 0], c['reason'], 
                          color='red', fontsize=6, alpha=0.7)
                          
+        # Plot endpoints
+        # Original but pruned (red cross)
+        pruned = self.original_endpoints - self.consolidated_endpoints
+        if pruned:
+            pruned_y, pruned_x = zip(*pruned)
+            plt.plot(pruned_x, pruned_y, 'rx', markersize=4, label='Pruned Endpoints')
+            
+        # Consolidated / Representative (blue circle)
+        if self.consolidated_endpoints:
+            cons_y, cons_x = zip(*self.consolidated_endpoints)
+            plt.plot(cons_x, cons_y, 'bo', markersize=4, label='Representative Endpoints')
+            
+        plt.legend(loc='upper right', fontsize=8)
         plt.axis('off')
         plt.savefig(os.path.join(self.output_dir, filename), dpi=300, bbox_inches='tight')
         plt.close()

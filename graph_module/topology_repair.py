@@ -3,7 +3,7 @@ import cv2
 from skimage.morphology import skeletonize
 
 try:
-    from .endpoint_detection import get_endpoints, get_connected_components, group_endpoints_by_component, estimate_endpoint_tangent
+    from .endpoint_detection import get_endpoints, get_connected_components, group_endpoints_by_component, estimate_endpoint_tangent, consolidate_topology_endpoints
     from .branch_detection import get_branch_points, extract_branches
     from .candidate_pairs import generate_candidate_pairs, generate_endpoint_to_branch_candidates
     from .scoring import CostFunction
@@ -11,7 +11,7 @@ try:
     from .validation import validate_path
     from .debug_viz import DebugLogger
 except ImportError:
-    from endpoint_detection import get_endpoints, get_connected_components, group_endpoints_by_component, estimate_endpoint_tangent
+    from endpoint_detection import get_endpoints, get_connected_components, group_endpoints_by_component, estimate_endpoint_tangent, consolidate_topology_endpoints
     from branch_detection import get_branch_points, extract_branches
     from candidate_pairs import generate_candidate_pairs, generate_endpoint_to_branch_candidates
     from scoring import CostFunction
@@ -23,7 +23,8 @@ class TopologyRepair:
     def __init__(self, probability_map, binary_mask, skeleton, 
                  w_prob=2.0, w_dist=1.0, w_dir=2.0, w_curve=1.5, w_target_align=2.0, w_ep_tangent=1.5,
                  prob_threshold=0.5, w_low_conf=5.0,
-                 min_avg_prob=0.3, max_low_conf_ratio=0.5, debug_dir="graph_debug"):
+                 min_avg_prob=0.3, max_low_conf_ratio=0.5,
+                 debug_dir="graph_debug"):
         
         self.prob_map = probability_map
         self.binary_mask = binary_mask
@@ -63,6 +64,17 @@ class TopologyRepair:
         labeled_branches, num_branches = extract_branches(repaired_skeleton, branch_mask)
         
         tangents = [estimate_endpoint_tangent(ep, repaired_skeleton, branch_mask) for ep in endpoints]
+        
+        original_endpoints = endpoints.copy()
+        
+        # Topology-aware consolidation
+        endpoints, tangents = consolidate_topology_endpoints(
+            endpoints, tangents, repaired_skeleton, branch_mask, 
+            length_threshold=15, tangent_dot_threshold=0.5
+        )
+        
+        searches_saved_estimate = len(original_endpoints) - len(endpoints)
+        self.logger.log_endpoints(original_endpoints, endpoints, searches_saved_estimate)
         
         ep_ep_candidates = generate_candidate_pairs(
             endpoints, tangents, labeled_comp, search_radius, min_score

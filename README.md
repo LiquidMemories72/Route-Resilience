@@ -210,11 +210,13 @@ The graph module converts segmentation masks into road networks.
 Pipeline:
 
 ```text
-Road Mask
+Road Mask & Probability Map
       ↓
 Morphological Cleanup
       ↓
 Skeletonization
+      ↓
+Topology Repair (Bidirectional A*)
       ↓
 Graph Extraction
       ↓
@@ -248,16 +250,19 @@ python graph_module\run_pipeline.py ^
 
 # Graph Parameters
 
-Adjust graph healing:
+Adjust graph healing and topology repair:
 
 ```bash
 python graph_module\run_pipeline.py ^
     --mask pred_masks\0001_sat_pred.png ^
+    --prob-map pred_masks\0001_sat_prob.npy ^
     --output-dir graph_test ^
     --endpoint-distance 15 ^
     --heading-angle 45 ^
     --junction-merge-distance 3
 ```
+
+Note: To enable A* topology repair routing, you must provide the `--prob-map` parameter.
 
 ---
 
@@ -290,6 +295,17 @@ graph_summary.json
 
 ---
 
+# Plotting Graphs
+
+You can batch-plot graphs by reading the `nodes.json` and `edges.json` from a parent directory of sample graphs using the `plot_graphs.py` script:
+
+```bash
+python plot_graphs.py "path\to\graph\samples"
+```
+
+This will iterate through the provided parent directory and output a `graph_visualization.png` in each subdirectory. It supports plotting endpoints and junctions as well as connecting edges through their geometric coordinates.
+
+---
 
 # Git Commands
 

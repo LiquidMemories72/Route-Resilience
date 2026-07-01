@@ -1,0 +1,478 @@
+{
+  "candidates": [
+    {
+      "stage": "Stage 1 (Small)",
+      "src": [
+        48,
+        134
+      ],
+      "dst": [
+        56,
+        128
+      ],
+      "dist": 10.0,
+      "score": 1.9630461798847738,
+      "path_length": 9,
+      "explored_nodes": 84,
+      "final_cost": 32.9169892587507,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 1 (Small)",
+      "src": [
+        135,
+        231
+      ],
+      "dst": [
+        135,
+        244
+      ],
+      "dist": 13.0,
+      "score": 1.8142383454426296,
+      "path_length": 0,
+      "explored_nodes": 191,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 1 (Small)",
+      "src": [
+        127,
+        214
+      ],
+      "dst": [
+        112,
+        206
+      ],
+      "dist": 17.0,
+      "score": 1.5787464628562722,
+      "path_length": 0,
+      "explored_nodes": 182,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        135,
+        231
+      ],
+      "dst": [
+        135,
+        244
+      ],
+      "dist": 13.0,
+      "score": 2.2042383454426298,
+      "path_length": 13,
+      "explored_nodes": 244,
+      "final_cost": 66.74386533064398,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        127,
+        214
+      ],
+      "dst": [
+        112,
+        206
+      ],
+      "dist": 17.0,
+      "score": 2.088746462856272,
+      "path_length": 16,
+      "explored_nodes": 311,
+      "final_cost": 70.69513633560993,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        10,
+        113
+      ],
+      "dst": [
+        24,
+        98
+      ],
+      "dist": 20.518284528683193,
+      "score": 2.0881838538292175,
+      "path_length": 16,
+      "explored_nodes": 347,
+      "final_cost": 88.87302605591658,
+      "is_valid": true,
+      "reason": "Passed with warning: Too many low conf (0.62 > 0.5)"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        127,
+        214
+      ],
+      "dst": [
+        114,
+        179
+      ],
+      "dist": 37.33630940518894,
+      "score": 1.7447618272515402,
+      "path_length": 36,
+      "explored_nodes": 635,
+      "final_cost": 92.72273193190364,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        127,
+        214
+      ],
+      "dst": [
+        118,
+        178
+      ],
+      "dist": 37.107950630558946,
+      "score": 1.7361779276032503,
+      "path_length": 37,
+      "explored_nodes": 610,
+      "final_cost": 96.24928897195858,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        135,
+        231
+      ],
+      "dst": [
+        114,
+        252
+      ],
+      "dist": 29.698484809834994,
+      "score": 1.602989953092884,
+      "path_length": 35,
+      "explored_nodes": 574,
+      "final_cost": 109.40669385455115,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        10,
+        113
+      ],
+      "dst": [
+        48,
+        110
+      ],
+      "dist": 38.118237105091836,
+      "score": 1.5797420841332268,
+      "path_length": 39,
+      "explored_nodes": 794,
+      "final_cost": 129.22188559797706,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        135,
+        231
+      ],
+      "dst": [
+        112,
+        250
+      ],
+      "dist": 29.832867780352597,
+      "score": 1.5558434303996496,
+      "path_length": 37,
+      "explored_nodes": 543,
+      "final_cost": 111.41358738236127,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        10,
+        113
+      ],
+      "dst": [
+        49,
+        114
+      ],
+      "dist": 39.01281840626232,
+      "score": 1.5219806786782488,
+      "path_length": 40,
+      "explored_nodes": 761,
+      "final_cost": 133.0896171499519,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        135,
+        231
+      ],
+      "dst": [
+        106,
+        223
+      ],
+      "dist": 30.083217912982647,
+      "score": 1.398335641740347,
+      "path_length": 29,
+      "explored_nodes": 641,
+      "final_cost": 157.32220993786038,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        127,
+        214
+      ],
+      "dst": [
+        127,
+        245
+      ],
+      "dist": 31.0,
+      "score": 1.38,
+      "path_length": 31,
+      "explored_nodes": 583,
+      "final_cost": 140.39419725128693,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        135,
+        231
+      ],
+      "dst": [
+        101,
+        250
+      ],
+      "dist": 38.948684188300895,
+      "score": 1.2853901610629994,
+      "path_length": 0,
+      "explored_nodes": 800,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        0,
+        128
+      ],
+      "dst": [
+        27,
+        101
+      ],
+      "dist": 38.18376618407357,
+      "score": 1.2363246763185285,
+      "path_length": 29,
+      "explored_nodes": 615,
+      "final_cost": 143.5969918631539,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        127,
+        214
+      ],
+      "dst": [
+        112,
+        250
+      ],
+      "dist": 39.0,
+      "score": 1.22,
+      "path_length": 0,
+      "explored_nodes": 800,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        10,
+        113
+      ],
+      "dst": [
+        48,
+        134
+      ],
+      "dist": 43.41658669218482,
+      "score": 1.2162000933679271,
+      "path_length": 0,
+      "explored_nodes": 800,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        127,
+        214
+      ],
+      "dst": [
+        114,
+        252
+      ],
+      "dist": 40.162171256046406,
+      "score": 1.1967565748790718,
+      "path_length": 0,
+      "explored_nodes": 800,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        10,
+        113
+      ],
+      "dst": [
+        57,
+        129
+      ],
+      "dist": 49.64876634922564,
+      "score": 1.176885552995162,
+      "path_length": 0,
+      "explored_nodes": 800,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        0,
+        128
+      ],
+      "dst": [
+        37,
+        152
+      ],
+      "dist": 44.10215414239989,
+      "score": 1.135455918009181,
+      "path_length": 0,
+      "explored_nodes": 389,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        36,
+        154
+      ],
+      "dst": [
+        0,
+        128
+      ],
+      "dist": 44.40720662234904,
+      "score": 1.1118558675530192,
+      "path_length": 0,
+      "explored_nodes": 586,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        127,
+        214
+      ],
+      "dst": [
+        101,
+        250
+      ],
+      "dist": 44.40720662234904,
+      "score": 1.1118558675530192,
+      "path_length": 0,
+      "explored_nodes": 800,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        0,
+        69
+      ],
+      "dst": [
+        10,
+        113
+      ],
+      "dist": 45.12205669071391,
+      "score": 1.0975588661857216,
+      "path_length": 45,
+      "explored_nodes": 756,
+      "final_cost": 188.24122934670174,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        10,
+        113
+      ],
+      "dst": [
+        36,
+        154
+      ],
+      "dist": 48.54894437575342,
+      "score": 0.5245173276900932,
+      "path_length": 0,
+      "explored_nodes": 800,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        0,
+        69
+      ],
+      "dst": [
+        10,
+        113
+      ],
+      "dist": 45.12205669071391,
+      "score": 0.4090614793382642,
+      "path_length": 45,
+      "explored_nodes": 748,
+      "final_cost": 189.47082367806132,
+      "is_valid": true,
+      "reason": "Valid"
+    }
+  ],
+  "optimization_stats": {
+    "original_endpoints": 42,
+    "consolidated_endpoints": 42,
+    "pruned_endpoints": 0,
+    "estimated_searches_saved": 0
+  }
+}

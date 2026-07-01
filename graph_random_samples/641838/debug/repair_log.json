@@ -1,0 +1,82 @@
+{
+  "candidates": [
+    {
+      "stage": "Stage 1 (Small)",
+      "src": [
+        177,
+        511
+      ],
+      "dst": [
+        166,
+        495
+      ],
+      "dist": 19.4164878389476,
+      "score": 1.2261352573422037,
+      "path_length": 0,
+      "explored_nodes": 213,
+      "final_cost": -1.0,
+      "is_valid": false,
+      "reason": "Empty path"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        177,
+        511
+      ],
+      "dst": [
+        166,
+        495
+      ],
+      "dist": 19.4164878389476,
+      "score": 1.8086298925106319,
+      "path_length": 17,
+      "explored_nodes": 384,
+      "final_cost": 112.62753847651928,
+      "is_valid": false,
+      "reason": "Low avg prob (0.28 < 0.3) | Low median prob (0.02) | Too many low conf (0.65 > 0.5)"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        133,
+        511
+      ],
+      "dst": [
+        177,
+        511
+      ],
+      "dist": 44.0,
+      "score": 1.12,
+      "path_length": 45,
+      "explored_nodes": 592,
+      "final_cost": 185.28403741947227,
+      "is_valid": true,
+      "reason": "Valid"
+    },
+    {
+      "stage": "Stage 2 (Medium)",
+      "src": [
+        133,
+        511
+      ],
+      "dst": [
+        177,
+        511
+      ],
+      "dist": 44.0,
+      "score": 0.61029033784546,
+      "path_length": 0,
+      "explored_nodes": 0,
+      "final_cost": 0.0,
+      "is_valid": false,
+      "reason": "Already connected after earlier merge"
+    }
+  ],
+  "optimization_stats": {
+    "original_endpoints": 9,
+    "consolidated_endpoints": 9,
+    "pruned_endpoints": 0,
+    "estimated_searches_saved": 0
+  }
+}

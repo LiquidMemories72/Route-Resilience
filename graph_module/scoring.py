@@ -7,7 +7,7 @@ class CostFunction:
         """
         Args:
             probability_map: 2D numpy array of probabilities [0, 1]
-            w_prob: weight for inverse probability
+            w_prob: weight for inverse probability cost
             w_dist: weight for euclidean distance
             w_dir: weight for direction change
             w_curve: weight for curvature (sharp turns)
