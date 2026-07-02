@@ -142,7 +142,7 @@ Key libraries: `torch`, `segmentation-models-pytorch`, `albumentations`, `scikit
 
 ### 2. Download model weights
 
-The trained weights (`best_model.pth`, 299 MB) are hosted on Hugging Face:
+The trained weights (`best_model.pth`, 299 MB) are hosted on Google Drive:
 
 👉 **[Download best_model.pth](https://drive.google.com/drive/folders/1TuOQP6J5ACCI0yj2q9l7oIeNnTHTcQeX?usp=sharing)**
 
