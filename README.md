@@ -74,11 +74,11 @@ For full architecture details, see [ARCHITECTURE.md](./ARCHITECTURE.md).
 
 **Healed road graph overlaid on satellite imagery:**
 
-![Graph on Satellite](graph_random_samples/605913/graph_on_satellite.png)
+![Graph on Satellite](graph_random_samples/687607/graph_on_satellite.png)
 
 **Graph nodes and edges (compressed road graph):**
 
-![Graph Nodes](graph_random_samples/605913/nodes.png)
+![Graph Nodes](graph_random_samples/687607/nodes.png)
 
 **Topology repair — before & after (synthetic test):**
 
