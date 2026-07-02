@@ -1,4 +1,4 @@
-﻿# Route Resilience — Road Extraction & Graph Generation
+﻿# Route Resilience - Road Extraction & Graph Generation
 
 > **Satellite imagery → segmentation mask → vectorized road graph** — a full end-to-end pipeline for extracting, topologically repairing, and exporting road networks from aerial imagery.
 
