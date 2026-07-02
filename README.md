@@ -144,7 +144,7 @@ Key libraries: `torch`, `segmentation-models-pytorch`, `albumentations`, `scikit
 
 The trained weights (`best_model.pth`, 299 MB) are hosted on Hugging Face:
 
-👉 **[Download best_model.pth](https://huggingface.co/LiquidMemories72/route-resilience-segformer/blob/main/best_model.pth)**
+👉 **[Download best_model.pth](https://drive.google.com/drive/folders/1TuOQP6J5ACCI0yj2q9l7oIeNnTHTcQeX?usp=sharing)**
 
 Place the file in the project root directory.
 
@@ -249,11 +249,4 @@ Each pipeline run produces the following inside the output directory:
 
 ---
 
-## Links
 
-| Resource | Link |
-|---|---|
-| 🌐 Live Demo / Frontend | [liquidmemories72.github.io/Route-Resilience](https://liquidmemories72.github.io/Route-Resilience) |
-| 🤗 Model Weights (HuggingFace) | [route-resilience-segformer](https://huggingface.co/LiquidMemories72/route-resilience-segformer) |
-| 📦 Dataset | [DeepGlobe Road Extraction (Kaggle)](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset) |
-| 📁 Repository | [GitHub: LiquidMemories72/Route-Resilience](https://github.com/LiquidMemories72/Route-Resilience) |
