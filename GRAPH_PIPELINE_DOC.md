@@ -299,4 +299,4 @@ Feel free to explore the source files via the links above, adjust the weighting 
 
 ---
 
-*Document generated on 2026‑06‑28.*
+
